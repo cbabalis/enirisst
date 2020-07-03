@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Elements</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/elements.css">
+<link rel="stylesheet" type="text/css" href="styles/elements_responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="index.html">ENIRISST</a></div>
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li class="active"><a href="index.html">Αρχική Σελίδα</a></li>
+									<li><a href="about.html">Σχετικά με Εμάς</a></li>
+									<li><a href="#">Υπηρεσίες</a></li>
+									{% if user.is_authenticated %}
+									<li>Hello, {{user.first_name}}</li>
+									<li><a href="accounts/logout">Logout</a></li>
+
+									{% else %}
+									<li><a href="accounts/login">Login</a></li>
+									<li><a href="accounts/register">Εγγραφή</a></li>
+									{% endif %}
+								</ul>
+							</nav>
+							<div class="header_phone ml-auto">Εθνικό Μετσόβειο Πολυτεχνείο</div>
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+			<div class="menu_logo"><a href="index.html">ENIRISST</a></div>
+			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+		</div>
+		<div class="menu_content">
+			<ul>
+				<li><a href="inex.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="news.html">News</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="background_image" style="background-image:url(images/elements.jpg)"></div>
+	</div>
+
+
+	<!-- Elements -->
+
+	<div class="elements">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					
+					
+					<!-- Accordions & Tabs -->
+
+					<div class="elements_accordions_tabs">
+						<div class="elements_title">Υπηρεσία Συνδυασμένων Μεταφορών</div>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="elements_accordions">
+									<div class="accordions">
+
+										<div class="accordion_container">
+											<div class="accordion d-flex flex-row align-items-center"><div>Ευρωπαϊκή Νομοθεσία</div></div>
+											<div class="accordion_panel">
+												<div>
+													<p>Η πρώτη νομοθετική πρωτοβουλία σχετικά με την καθιέρωση κοινών κανόνων για τις συνδυασμένες μεταφορές σε επίπεδο κρατών μελών της ΕΕ, έγινε με την οδηγία 75/ 130/ΕΟΚ, η οποία βασίστηκε στο άρθρο 75 της συνθήκης ιδρύσεως της Ευρωπαϊκής Οικονομικής Κοινότητας(συνθήκη της Ρώμης).
+
+														Η πρώτη αυτή οδηγία αφορούσε κανόνες αποκλειστικά για τις οδικές-σιδηροδρομικές συνδυασμένες μεταφορές , ορίζοντας την έννοια της συνδυασμένης μεταφοράς ,τα συνοδευτικά αποδεικτικά έγγραφα που προσδιορίζουν πέρα από τις πληροφορίες για το εμπόρευμα και τον αρχικό και τελικό σιδηροδρομικό σταθμό μεταφόρτωσης, τις κρατήσεις θέσεων (σε περίπτωση ελέγχου από άλλα κράτη μέλη κατά τη διέλευση συνόρων οδικώς) καθώς και τις απαλλαγές από περιορισμούς δασμολογικών ποσοστώσεων και διμερών συμφωνιών. Ακόμη δίνεται και ένα χρονικό διάστημα για την κατάθεση τεχνικής έκθεσης εφαρμογής της οδηγίας από την επιτροπή στο συμβούλιο.</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion_container">
+											<div class="accordion d-flex flex-row align-items-center"><div>Ελληνική Νομοθεσία </div></div>
+											<div class="accordion_panel">
+												<div>
+													<p>Στην Ελλάδα η οδηγία 75/130/ΕΟΚ μαζί με τις τροποποιήσεις της, περιλήφθηκαν στα προεδρικά διατάγματα 63/1986 της 3ης Μαρτίου 1986, 474/1988 της 15ης Σεπτεμβρίου 1988, 326/1992 της 30ης Σεπτεμβρίου 1992, ενώ η εναρμόνιση με την οδηγία 92/106/EOK που βρίσκεται σε ισχύ, έγινε στις 24 Νοεμβρίου 1995 με το προεδρικό διάταγμα 431/1995.</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion_container">
+											<div class="accordion d-flex flex-row align-items-center active"><div>Υπολογισμοί</div></div>
+											<div class="accordion_panel">
+												<div>
+													<p>αυτό είναι κενό.</p>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="tabs">
+									<div class="tabs_container">
+										<div class="tabs d-flex flex-row align-items-center justify-content-start flex-wrap">
+											<div class="tab">Επισκόπηση</div>
+											<div class="tab">Νομοθεσία & Προδιαγραφές</div>
+											<div class="tab active">Δημοσιεύσεις Μελέτες Έρευνα</div>
+										</div>
+										<div class="tab_panels">
+											<div class="tab_panel">
+												<div class="tab_panel_content">
+													<div class="tab_text">
+														<p>Η συγκεκριμένη Yπηρεσία EN.I.R.I.S.S.T σχετίζεται με την ανάπτυξη δεικτών σχετικά με την εξέλιξη των συνδυασμένων μεταφορών στην Ελλάδα σύμφωνα με την Ευρωπαϊκή Οδηγία 92/106/EEC. Συγκεκριμένα προβλέπεται η καταγραφή στοιχείων για τις μεταφορικές μονάδες (φορτηγά, ρυμουλκούμενα, ημιρυμουλκούμενα με ή χωρίς ρυμουλκό, κινητά αμαξώματα ή εμπορευματοκιβώτια 20 ποδών και άνω) που, χρησιμοποιούν το οδικό δίκτυο για το αρχικό ή τελικό τμήμα της διαδρομής ενώ  για το ενδιάμεσο τμήμα, χρησιμοποιούν το σιδηροδρομικό δίκτυο ή μια διαδρομή διά θαλάσσης σε ακτίνα που υπερβαίνει τα 100 χιλιόμετρα σε ευθεία γραμμή. Συγκεκριμένα ζητούνται στατιστικά στοιχεία που αφορούν: (α) στις συνδέσεις που εξυπηρετούνται με συνδυασμένες μεταφορές,  (β) στον αριθμό των οχημάτων, κινητών αμαξωμάτων και εμπορευματοκιβωτίων που μεταφέρονται στις διάφορες συνδέσεις  (γ) στην ποσότητα των μεταφερόμενων εμπορευμάτων σε τόνους , (δ) στις παροχές υπηρεσιών σε τονοχιλιόμετρα. </p>
+													</div>
+												</div>
+											</div>
+											<div class="tab_panel">
+												<div class="tab_panel_content">
+													<div class="tab_text">
+														<p>Η πρώτη νομοθετική πρωτοβουλία σχετικά με την καθιέρωση κοινών κανόνων για τις συνδυασμένες μεταφορές σε επίπεδο κρατών μελών της ΕΕ, έγινε με την οδηγία 75/ 130/ΕΟΚ, η οποία βασίστηκε στο άρθρο 75 της συνθήκης ιδρύσεως της Ευρωπαϊκής Οικονομικής Κοινότητας(συνθήκη της Ρώμης).
+
+															Η πρώτη αυτή οδηγία αφορούσε κανόνες αποκλειστικά για τις οδικές-σιδηροδρομικές συνδυασμένες μεταφορές , ορίζοντας την έννοια της συνδυασμένης μεταφοράς ,τα συνοδευτικά αποδεικτικά έγγραφα που προσδιορίζουν πέρα από τις πληροφορίες για το εμπόρευμα και τον αρχικό και τελικό σιδηροδρομικό σταθμό μεταφόρτωσης, τις κρατήσεις θέσεων (σε περίπτωση ελέγχου από άλλα κράτη μέλη κατά τη διέλευση συνόρων οδικώς) καθώς και τις απαλλαγές από περιορισμούς δασμολογικών ποσοστώσεων και διμερών συμφωνιών. Ακόμη δίνεται και ένα χρονικό διάστημα για την κατάθεση τεχνικής έκθεσης εφαρμογής της οδηγίας από την επιτροπή στο συμβούλιο.</p>
+													</div>
+												</div>
+											</div>
+											<div class="tab_panel active">
+												<div class="tab_panel_content">
+													<div class="tab_text">
+														<p>Μελέτες και έρευνα.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Loaders -->
+
+					<div class="loaders">
+						<div class="elements_title">Στατιστικά Στοιχεία</div>
+
+						<!-- Loaders -->
+						<div class="row loaders_container">
+							<div class="col-lg-3 loader_col">
+								<!-- Loader -->
+								<div class="loader" data-perc="0.75">
+									<div class="loader_content">
+										<div class="loader_title">κάλυψη διαδρομών</div>
+										<div class="loader_subtitle">Κάλυψη των διαδρομών.</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 loader_col">
+								<!-- Loader -->
+								<div class="loader" data-perc="0.83">
+									<div class="loader_content">
+										<div class="loader_title">km διανυθέντα</div>
+										<div class="loader_subtitle">Πόσα χιλιόμετρα διένυσε σήμερα.</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 loader_col">
+								<!-- Loader -->
+								<div class="loader" data-perc="0.25">
+									<div class="loader_content">
+										<div class="loader_title">πραγματοποιηθείσες στάσεις</div>
+										<div class="loader_subtitle">Στάσεις που έχουν πραγματοποιηθεί.</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 loader_col">
+								<!-- Loader -->
+								<div class="loader" data-perc="0.95">
+									<div class="loader_content">
+										<div class="loader_title">πλοία</div>
+										<div class="loader_subtitle">Πόσα πλοία εκφορτώθηκαν.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Buttons -->
+<hr>
+					<div class="buttons">
+						<div class="elements_title">Εξωτερικές Εφαρμογές</div>
+						<div class="buttons_container d-flex flex-row align-items-start justify-content-start">
+							<div class="button"><a href="#">GIS Εφαρμογή</a></div>
+							<div class="button button_2"><a href="#">Μεταδεδομένα</a></div>
+							<div class="button button_3"><a href="#">ΕΛΣΤΑΤ</a></div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="background_image" style="background-image:url(images/footer_1.jpg)"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter">
+						<div class="newsletter_title_container text-center">
+							<div class="newsletter_title">Εγγραφείτε στο newsletter μας!</div>
+							<div class="newsletter_subtitle">Αποκτήστε πρόσβαση στις τελευταίες ενημερώσεις στοιχείων.
+							</div>
+						</div>
+						<div class="newsletter_form_container">
+							<form action="#" class="newsletter_form d-flex flex-md-row flex-column align-items-start justify-content-between" id="newsletter_form">
+								<div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
+									<div><input type="text" class="newsletter_input newsletter_input_name inpt" id="newsletter_input_name" placeholder="Name" required="required"><div class="input_border"></div></div>
+									<div><input type="email" class="newsletter_input newsletter_input_email inpt" id="newsletter_input_email" placeholder="Your e-mail" required="required"><div class="input_border"></div></div>
+								</div>
+								<div><button class="newsletter_button">Εγγραφή</button></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_contact_row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="row">
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div
+								class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img
+										src="{% static 'images/sign.svg' %}" alt="">
+								</div>
+								<div class="footer_contact_title">στοιχεία επικοινωνίας</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>Σταθερό Τηλέφωνο: +30 210 772 1321</li>
+										<li>Fax: +44 5567 89 3322 332</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div
+								class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img
+										src="{% static 'images/trekking.svg' %}" alt="">
+								</div>
+								<div class="footer_contact_title">Διεύθυνση</div>
+								<div class="footer_contact_list">
+									<ul style="max-width:190px">
+										<li>Ηρώων Πολυτεχνείου 9, 15773</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div
+								class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img
+										src="{% static 'images/around.svg' %}" alt="">
+								</div>
+								<div class="footer_contact_title">Στείλε μας e-mail
+								</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>youremail@gmail.com</li>
+										<li>Office@yourbusinessname.com</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
+	</footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/progressbar/progressbar.min.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+<script src="js/elements.js"></script>
+</body>
+</html>
